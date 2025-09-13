@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Hotel Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+        <a href="#" class="logo"> <img src="image/logo.png" alt=""> </a>
+
+        <ul class="nav-menu">
+          <li> <a href="#home" class="nav-link">Home</a> </li>
+          <li> <a href="#about" class="nav-link">About</a> </li>
+          <li> <a href="#rooms" class="nav-link">Rooms</a> </li>
+          <li> <a href="#restaurant" class="nav-link">Restaurant</a> </li>
+          <li> <a href="#gallery" class="nav-link">Gallery</a> </li>
+          <li> <a href="#contact" class="nav-link">Contact</a> </li>
+        </ul>
+
+        <div class="hambuger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <script>
+    const hambuger = document.querySelector('.hambuger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hambuger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hambuger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    const navLink = document.querySelectorAll('.nav-link');
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+      hambuger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script>
+
+  <section class="home" id="home">
+    <div class="head_container">
+      <div class="box">
+        <div class="text">
+          <h1>Вашият дом далеч от дома</h1>
+          <p>
+            Добре дошли в Hyatt Regency Pravets Resort. Разположен на брега на живописното езеро в Правец, нашият хотел предлага изискани стаи и апартаменти с великолепен изглед, първокласни удобства и безупречно обслужване. Независимо дали сте тук за бизнес или удоволствие, при нас ще намерите всичко необходимо за един незабравим престой – от релаксиращ СПА център и изискана кухня до
+             разнообразни възможности за спорт и отдих. Почувствайте се като у дома си далеч от дома в Hyatt Regency Pravets Resort. </p>
+          <button>ВИШ ПОВЕЧЕ</button>
+        </div>
+      </div>
+      <div class="image">
+        <img src="image/home1.jpg" class="slide">
+      </div>  
+      
+    </div>
+  </section>
+  <script>
+    function img(anything) {
+      document.querySelector('.slide').src = anything;
+    }
+
+    function change(change) {
+      const line = document.querySelector('.image');
+      line.style.background = change;
+    }
+  </script>
+  <section class="book">
+    <div class="container flex">
+      <div class="input grid">
+        <div class="box">
+          <label>От:</label>
+          <input type="date" placeholder="Check-in-Date">
+        </div>
+        <div class="box">
+          <label>До:</label>
+          <input type="date" placeholder="Check-out-Date">
+        </div>
+        <div class="box">
+          <label>Брой възрастни:</label> <br>
+          <input type="number" placeholder="0">
+        </div>
+        <div class="box">
+          <label>Брой деца:</label> <br>
+          <input type="number" placeholder="0">
+        </div>
+      </div>
+      <div class="search">
+        <input type="submit" value="ПОТЪРСИ">
+      </div>
+    </div>
+  </section>
+  <section class="about top" id="about">
+    <div class="container flex">
+      <div class="left">
+        <div class="img">
+          <img src="image/a1.jpg" alt="" class="image1">
+        </div>
+      </div>
+      <div class="right">
+        <div class="heading">
+          <h5>Вдигаме комфорта на най-високо ниво</h5>
+          <h2>Добре дошли в Hyatt Regency Pravets Resort</h2>
+          <p>Нашият хотел предлага съвършено съчетание на лукс и удобство, за да направи вашия престой незабравим. Насладете се на изискани ст
+            аи и апартаменти с великолепен изглед към езерото или планината, оборудвани с всичко необходимо за вашето удобство и релакс. Гости
+            те ни могат да се възползват от първокла
+            сни услуги и съоръжения, включително модерен СПА център, басейн и разнообразни ресторанти, предлагащи гурме ястия.</p>
+          <p>Потопете се в атмосферата на комфорт и елегантност, където всяка ваша нужда и желание ще бъдат удовлетворени.
+             Нашият отдаден екип е тук, за да осигури вашето безупречно изживяване. Добре дошли в Hyatt R
+            egency Pravets Resort – мястото, където луксът среща спокойствието.</p>
+          <button class="btn1">ВИШ ПОВЕЧЕ</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="wrapper top">
+    <div class="container">
+      <div class="text">
+        <h2>Нашите удобства</h2>
+        <p>В Hyatt Regency Pravets Resort предлагаме всичко необходимо за вашето пълноценно и незабравимо преживяване. Насладете се на разнообразни удобства и услуги, които ще направят престоя ви при нас изключително приятен и комфортен.</p>
+  
+        <div class="content">
+          <div class="box flex">
+            <i class="fas fa-swimming-pool"></i>
+            <span>Басейн</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-dumbbell"></i>
+            <span>Фитнес и йога</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-spa"></i>
+            <span>СПА и масажи</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-ship"></i>
+            <span>Разходки с лодка</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-swimmer"></i>
+            <span>Уроци по сърф</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-microphone"></i>
+            <span>Конферентна зала</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-water"></i>
+            <span>Гмуркане и шнорхелинг</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-umbrella-beach"></i>
+            <span>Частен плаж</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="room top" id="room">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h2>Стаи & Aпартаменти</h2>
+        </div>
+        <div class="button">
+          <button class="btn1">ВИШ ВСИЧКИ СТАЙ И АПАРТАМЕНТИ</button>
+        </div>
+      </div>
+
+      <div class="content grid">
+        <div class="box">
+          <div class="img">
+            <img src="image/r1.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>2 eдинични легла с изглед към езерото</h3>
+            <p> <span></span>120 лв. <span>/за вечер</span> </p>
+          </div>з
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="image/r2.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Президентски апартамент</h3>
+            <p> <span></span>170 лв. <span>/за вечер</span> </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="image/r3.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Regency Suite с изглед към езерото</h3>
+            <p> <span></span>110 лв. <span>/за вечер</span> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="wrapper wrapper2 top">
+    <div class="container">
+      <div class="text">
+        <div class="heading">
+        
+          <h2>Какво казват хората?</h2>
+        </div>
+
+        <div class="para">
+          <p><P>★★★★★
+          </P>
+          "Прекрасно преживяване в Hyatt Regency Pravets! Луксозни стаи, релаксиращ СПА център и изумителна храна. Обслужването беше внимателно и любезно. Не мога да препоръчам достатъчно за уикенд отдих или по-продължителна почивка. С нетърпение очаквам следващото посещение!"</p>
+
+          <div class="box flex">
+            
+            <div class="name">
+              <h5>-Георги Андреев</h5>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="restaurant top" id="restaurant">
+    <div class="container flex">
+      <div class="left">
+        <img src="image/re.jpg" alt="">
+      </div>
+      <div class="right">
+        <div class="text">
+          <h2>Нашите ресторанти</h2>
+          <p>Насладете се на изключителни вкусове и гурме изживявания в ресторантите на Hyatt Regency Pravets. Ние предлагаме разнообразие от кухни, които ще задоволят и най-изисканите вкусове на нашите гости.</p>
+        </div>
+        <div class="accordionWrapper">
+          <div class="accordionItem open">
+            <h2 class="accordionIHeading">Италианска кухня</h2>
+            <div class="accordionItemContent">
+              <p>Нашият италиански ресторант ви предлага автентични италиански ястия, приготвени с най-висококачествени продукти и със специално внимание към вкуса и излъчването.</p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Мексиканска кухня</h2>
+            <div class="accordionItemContent">
+              <p>Разгърнете вкусовете си с нашите мексикански специалитети, приготвени със свежи продукти и ароматни подправки, които ще ви оставят с неизгладимо впечатление.</p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Италианска кухня</h2>
+            <div class="accordionItemContent">
+              <p>Отново се потопете в богатството на италианската кухня с нашите вкусни и изискани ястия, представени с внимание към детайла и качеството на продуктите.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    var accItem = document.getElementsByClassName('accordionItem');
+    var accHD = document.getElementsByClassName('accordionIHeading');
+  
+    for (i = 0; i < accHD.length; i++) {
+      accHD[i].addEventListener('click', toggleItem, false);
+    }
+  
+    function toggleItem() {
+      var itemClass = this.parentNode.className;
+      for (var i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordionItem close';
+      }
+      if (itemClass == 'accordionItem close') {
+        this.parentNode.className = 'accordionItem open';
+      }
+    }
+  </script>
+  
+
+  <section class="gallary mtop " id="gallary">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h2>Снимки от хотела</h2>
+        </div>
+        <div class="button">
+          <button class="btn1">ВИШ ГАЛЕРИЯ</button>
+        </div>
+      </div>
+
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <img src="image/g1.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g2.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g3.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g4.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g5.jpg" alt="">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+<script>
+  $(document).ready(function(){
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2
+        },
+        1000: {
+          items: 4
+        }
+      }
+    });
+  });
+</script>
+
+<section class="map top">
+  <iframe src="https://maps.google.com/maps?q=Ezeroto%208,%202161%20Pravets&t=&z=13&ie=UTF8&iwloc=&output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+
+<footer>
+  <div class="container grid top">
+    <div class="box">
+      <p>В Hyatt Regency Pravets Resort предлагаме всичко необходимо за вашето пълноценно и незабравимо преживяване. Насладете се на разнообразни удобства и услуги, които ще направят престоя ви при нас изключително приятен и комфортен.</p>
+
+      <p>Приемаме следните начини на плащане:</p>
+      <div class="payment grid">
+        <img src="https://img.icons8.com/color/48/000000/visa.png" />
+        <img src="https://img.icons8.com/color/48/000000/mastercard.png" />
+        <img src="https://img.icons8.com/color-glass/48/000000/paypal.png" />
+        <img src="https://img.icons8.com/fluency/48/000000/amex.png" />
+      </div>
+    </div>
+
+    <div class="box">
+      <h3>Последни новини</h3>
+
+      <ul>
+        <li>Нашата тайна екскурзия с лодка е само за вас</li>
+        <li>Отпуснете се и се избавете в нашите естествени скривалища</li>
+        <li>Концерти с жива музика</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h3>За клиентите</h3>
+      <ul>
+        <li>Относно HAYYAT</li>
+        <li>Обслужване на клиенти</li>
+        <li>Корпоративни профили</li>
+        <li>Финансова информация</li>
+        <li>Общи условия</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h3>Свържете се с нас</h3>
+
+      <ul>
+        <li>Ezeroto 8, 2161 Pravets</li>
+        <li><i class="far fa-envelope"></i>hayyat@gmail.com </li>
+        <li><i class="far fa-phone-alt"></i>+359 887 244 038</li>
+        <li><i class="far fa-phone-alt"></i>+359 887 244 038</li>
+        <li><i class="far fa-comments"></i>Обслужване на клиенти 24/7 </li>
+      </ul>
+    </div>
+  </div>
+</footer>
